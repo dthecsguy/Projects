@@ -1,0 +1,86 @@
+/*////////////////////////////////*/
+/*        GAMESPACE CONTENTS      */
+/*////////////////////////////////*/
+
+.editor-container {
+  position: relative;
+  height: 100%;
+  width: 95%;
+  border: thin solid black;
+}
+
+#editor { 
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#editor2 {
+	position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.comp-info {
+	height: 100%;
+	width: 95%;
+	display: flex;
+	align-items: center;
+}
+
+.comp-info.left {
+	border-right: thin solid black;
+	display: flex;
+	align-content: left;
+	width: 40%;
+}
+
+.comp-info.right {
+	border-left: thin solid black;
+	display: flex;
+	flex-flow: row-reverse nowrap;
+	align-content: right;
+	align-items: center;
+	width: 40%;
+}
+
+#timer {
+	width: 20%;
+}
+.editor-container.left {
+	border-left: none;
+}
+
+.editor-container.right {
+	border-right: none;
+	width: 100%;
+}
+
+img.profile-pic {
+	height: 50px;
+	width: 50px;
+}
+
+.profile-info{
+	flex-flow: column nowrap;
+}
+
+.vote {
+	display: flex;
+	justify-content: middle;
+}
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.vote.right {
+	flex-flow: row-reverse nowrap;
+}

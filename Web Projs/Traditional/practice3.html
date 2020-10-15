@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> Sabio Practice </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			
+			$(document).ready(function(){
+			
+				function writeHtml(){			
+					var model = $("#Model").val();
+					var make = $("#Make").val();
+					var year = $("#Year").val();
+					var vin = $("#VIN").val();
+					
+					$("#pp").append("<ul id = 'car'>")
+					$("#pp").append("<li>Make: " + make + "</li>" +
+								"<br/><li>Model: " + model + "</li>" +
+								"<br/><li>Year: " + year + "</li>" +
+								"<br/><li>VIN: " + vin + "</li></ul>");
+				}
+				
+				function hideCar(){				
+					$("#pp").hide();				
+				}
+	
+				console.log("got here");
+	
+				$("#Register").click(function(){
+					writeHtml();
+					$("#myForm")[0].reset();				
+				});
+				
+				$("#Cancel").click(function(){
+					hideCar();
+				});
+			
+			});
+		
+		</script>
+	</head>
+	<body>
+		<div>
+			<form id = "myForm">			
+				<input id = "Model" placeholder = "Model"><br>
+				<input id = "Make" placeholder = "Make"><br>
+				<input id = "Year" type = "number" placeholder = "Year"><br>
+				<input id = "VIN" placeholder = "VIN"><br>
+				
+				<button id = "Register" type = "button" name = "Register">Register</button>
+				<button id = "Cancel" type = "button" name = "Cancel">Cancel</button>
+			</form>
+			<p id = "pp">
+			
+			</p>
+		</div>
+	</body>
+</html>

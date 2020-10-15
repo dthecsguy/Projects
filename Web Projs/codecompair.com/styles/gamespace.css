@@ -1,0 +1,45 @@
+/*/////////////////////////////////////////////*/
+/*                  GAME SPACE                 */
+/*/////////////////////////////////////////////*/
+.left-comp-pane {
+  width: 51%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  background: linear-gradient(45deg, #d3dae6 50%, black 50% 51%, transparent 0), 
+			  linear-gradient(135deg, #78c75f 50%, black 50% 51%, #d3dae6 0);
+  background-position: right bottom;
+  background-repeat: repeat-y;
+  background-size: 25px 25px;
+}
+
+.right-comp-pane {
+  width: 49%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+.left-comp-pane .competition {
+  height: 90%;
+  width: 100%;
+}
+
+.left-comp-pane .vote {
+  height: 10%;
+  width: 95%;
+  border-right: thin solid black;
+}
+
+.right-comp-pane .competition {
+  height: 90%;
+  width: 100%
+}
+
+.right-comp-pane .vote {
+  height: 10%;
+  width: 100%;
+  border-left: thin solid black;
+}
+
+/*# sourceMappingURL=gamespace.css.map */

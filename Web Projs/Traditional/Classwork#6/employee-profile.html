@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+		
+		<!-- These three things make bootstrap work -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style> 
+			body{
+				margin: auto;
+			}
+			
+			.borda{
+				border: thin solid #ccc;
+				padding: 2%;
+			}
+		</style>
+		<script src = "myScript.js"></script>
+		
+		<title> First attemp at Bootstrap Form </title>
+	</head>
+	<body>
+		<div class = "container" style = "margin: auto; width: 50%; padding: 5%">
+			<div class = "borda" id = "output">
+				<p id = "empInfo">
+				
+				</p>
+			</div>
+			<div class = "borda">
+				<form id = "empForm">
+					<div class = "row">
+						<div class = "form-group">
+							<div class = "col-md-6">
+								<label for = "nameFirst">First Name</label>
+								<input id = "nameFirst" class = "form-control" placeholder = "First Name">
+							</div>
+							
+							<div class = "col-md-6">
+								<label for = "nameLast">Last Name</label>
+								<input id = "nameLast" class = "form-control" placeholder = "Last Name">
+							</div>
+						</div>
+					</div>
+					
+					<br/>
+					
+					<div class = "row">
+						<div class = "form-group">
+							<div class = "col-md-4">
+								<label for = "gender">Gender</label>
+								<div class = "input-group" id = "gender">
+									<span class = "input-group-addon">
+										<label class="radio-inline"><input name = "gender" type = "radio" id = "genderM" >Male</label>
+										<label class="radio-inline"><input name = "gender" type = "radio" id = "genderF" >Female</label>
+										<label class="radio-inline"><input name = "gender" type = "radio" id = "genderO" checked>Other</label>
+									</span>
+									<input class = "form-control" type = "text" disabled = "disabled" value = "">
+								</div>
+							</div>
+							
+							<div class = "col-md-3 col-md-offset-2">		
+									<label for = "salary">Salary</label>
+									<div class = "input-group">	
+										<span class = "input-group-addon">$</span>
+										<input id = "salary" type = "number" class = "form-control" step = "0.01" min = "0.01" value = "0.01">
+									</div>
+							</div>
+							
+							<div class = "col-md-2">
+								<label for = "ageN">Age</label>
+								<input type = "number" id = "ageN" class = "form-control">
+							</div>
+						</div>
+					</div>
+					
+					<br/>
+					
+					<div class = "row">
+						<div class = "form-group">
+							<div class = "col-md-3">
+								<div class = "input-group">
+									<span class = "input-group-addon">
+										<input type = "checkbox" id = "manager">
+									</span>
+									<input type = "text" class = "form-control" disabled = "disabled" value = "Manager">
+								</div>
+							</div>
+						
+							<div class = "col-md-9">
+								<input type = "textarea" rows = "30" cols = "4" id = "comments" class = "form-control" placeholder = "Comments...">
+							</div>
+						</div>
+					</div>
+					
+					<br/>
+					
+					<div class = "row">
+						<div class = "form-group">
+							<div class = "col-md-7">
+								<div class = "input-group mb-3">
+									<span class = "input-group-addon" style = "padding: 0; margin: 0">
+										<button type = "button" class = "btn btn-default btn-lg" id = "taxes" style = "margin: 0; padding-top: 1.1em; padding-bottom: 1.1em;">Calculate Taxes</button>
+									</span>
+									<input id = "sTaxVal" type = "text" class = "form-control" disabled = "disabled" placeholder = "State Tax" value = "">
+									<input id = "fTaxVal" type = "text" class = "form-control" disabled = "disabled" placeholder = "Fed Tax" value = "">
+								</div>
+							</div>
+							
+							<div class = "col-md-1 col-md-offset-1" style = "padding: 2%">
+								<button type = "button" id = "submit" class = "btn btn-default btn-lg align-middle">Submit</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>JS Practice</title>
+	</head>
+	
+	<body>
+		<script>		
+			var car = {	make: "", model: "", year: 0};
+			var animal = { animalName: "", animalType: "", age: 0, neutered: false};
+			var person = { firstName: "", lastName: "", age: 0, occupation: "", 
+						address: { street: "", city: "", state: "", zip: 0}};
+			
+			var accounts = {
+				BankOfAmerica: {
+					number: 12345, 
+					nickname: "BA",
+					city: "Los Angeles",
+					checking: true,
+					services: {
+						stolen: true
+						, creditReport: true
+					},
+					
+					printServices: 
+					
+					function(bank){
+					
+						console.log(bank);
+						console.log(" -> ");
+						return this.number + ": stolen card: " + this.services.stolen + 
+											", credit report: " + this.services.creditReport;
+					}
+				}
+				, Chase: {
+					number: 78910
+					, nickname: "Ch"
+					, city: "San Diego"
+					, checking: false
+					, services: {
+						stolen: false
+						, creditReport: true
+					},
+					
+					printServices: 
+					
+					function(bank){
+					
+						console.log(bank);
+						console.log(" -> ");
+						return this.number + ": stolen card: " + this.services.stolen + 
+											", credit report: " + this.services.creditReport;
+					}
+				}
+				, WellsFargo: {
+					number: 11223
+					, nickname: "WF"
+					, city: "Los Angeles"
+					, checking: true
+					, services: {
+						stolen: false
+						, creditReport: false
+					},
+					
+					printServices: 
+					
+					function(bank){
+					
+						console.log(bank);
+						console.log(" -> ");
+						return this.number + ": stolen card: " + this.services.stolen + 
+											", credit report: " + this.services.creditReport;
+					}
+				}
+			}
+			car.make = "Honda";
+			car.model = "Civic";
+			car.year = 2018;
+			
+			animal.animalName = "Chucho";
+			animal.animalType = "dog";
+			animal.age = 3;
+			animal.neutered = false;
+			console.log(animal + "\n\n");
+			
+			person.firstName = "John";
+			person.lastName = "Smith";
+			person.age = 33;
+			person.occupation = "Musician";
+			person.address.street = "101 Code St";
+			person.address.city = "Los Angeles";
+			person.address.zip = 00404;
+			console.log(person + "\n\n");
+			
+			animal["animalName"] = "Fido";
+			animal["animalType"] = "dog";
+			animal["age"] = 4;
+			animal["neutered"] = true;
+			console.log(animal + "\n\n");
+			
+			car.VIN = "N1234";
+			console.log(car + "\n\n");
+			
+			console.log(typeof accounts + "\n\n");
+			console.log(typeof accounts.Chase + "\n\n");
+			console.log(typeof accounts.BankOfAmerica.number + "\n\n");
+			console.log(typeof accounts.WellsFargo.city + "\n\n");
+			console.log(typeof accounts.Chase.services.stolen + "\n\n");
+			console.log(typeof null);
+			
+			console.log(accounts.BankOfAmerica.printServices("Bank of America") + "\n\n");
+			console.log(accounts.Chase.printServices("Chase") + "\n\n");
+			console.log(accounts.WellsFargo.printServices("Wells Fargo") + "\n\n");		
+		</script>
+	</body>
+</html>

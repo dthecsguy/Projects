@@ -1,0 +1,41 @@
+/*/////////////////////////////////////////////*/
+/*                  GAME SPACE                 */
+/*/////////////////////////////////////////////*/
+$backColor: #d3dae6;
+
+
+.left-comp-pane {
+  width: 54%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  background: linear-gradient(45deg, $backColor 50%, black 50% 51%, transparent 0),
+              linear-gradient(135deg, #78c75f 50%, black 50% 51%, $backColor 0);
+  background-position: right bottom;
+  background-repeat: repeat-y;
+  background-size: 25px 25px;
+}
+
+.right-comp-pane {
+  width: 46%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+.left-comp-pane .competition {
+  height: 89%;
+  width: 100%;
+}
+
+.left-comp-pane .vote {
+  height: 10%
+}
+
+.right-comp-pane .competition {
+  height: 90%
+}
+
+.right-comp-pane .vote {
+  height: 10%
+}

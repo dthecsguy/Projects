@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>JS Practice</title>
+	</head>
+	
+	<body>
+		<script>
+		
+		var sabio = { page: {}};
+		
+		sabio.page.empty = [];
+		console.log(sabio.page.empty.length);
+		
+		sabio.page.myNumbers = [0, 0, 0, 0];
+		
+		sabio.page.pets = ['Fido', 'Chucho', 'Rocky', 'Drago','Precious'];
+		console.log(sabio.page.pets.length);
+		console.log(sabio.page.pets[1]);
+		console.log(sabio.page.pets[3]);
+		
+		sabio.page.colors = ['Red', 'White', 'Black', 'Blue'];
+		sabio.page.colors.push("Yellow");
+		sabio.page.colors.unshift("Green");
+		
+		sabio.page.combine = function(array1, array2){
+		
+			return array1.concat(array2);
+		
+		}
+		
+		sabio.page.removeFirst = function(array){
+		
+			return array.shift();
+		
+		}
+		
+		sabio.page.removeLast = function(array){
+		
+			return array.pop();
+		
+		}
+		
+		sabio.page.removeThird = function(array){
+		
+			return array.splice(3, 1);
+		
+		}
+		
+		sabio.page.calledInLoop = function(vari){ console.log(vari); }
+		sabio.page.loopThrough = function(array){
+		
+			for(var cnt in array)
+			{
+				sabio.page.calledInLoop(array[cnt]);
+			}
+		
+		}
+		
+		sabio.page.loopThrough(sabio.page.colors);
+		
+		</script>
+	</body>
+</html>

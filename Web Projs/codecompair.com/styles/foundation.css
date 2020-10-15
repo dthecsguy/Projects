@@ -1,0 +1,66 @@
+.flex_container {
+  display: flex;
+  background-color: #d3dae6;
+  flex-flow: row wrap;
+  height: 97vh;
+  width: initial;
+  align-content: center;
+  justify-content: center;
+ 
+}
+
+.flex_item {
+  height: initial;
+  width: initial;
+  border: thin solid black;
+  border-collapse: separate;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.pane {
+  height: 100%;
+  width: inherit;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.side-pane-left{
+  width: 15%;
+}
+
+.side-pane-right {
+  width: 15%;
+}
+
+.middle-pane {
+  width: 70%;
+}
+
+.middle-pane .flex_item.middle {
+  height: 70%;
+  flex-flow: row wrap;
+  display: flex;
+}
+
+.middle-pane .flex_item.top {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.flex_item.top{
+  height: 40%;
+}
+
+.flex_item.middle {
+  height: 40%;
+}
+
+.flex_item.bottom{
+  height: 20%;
+}

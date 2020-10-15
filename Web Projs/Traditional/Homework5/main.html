@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sabio - Prework Exercises</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="http://sabioapi2.azurewebsites.net/assets/img/Sabio_Logo_S_Swirl_57x57.png">
+    <link rel="icon"
+          type="image/png"
+          href="http://sabioapi2.azurewebsites.net/assets/img/Sabio_Logo_S_Swirl_57x57.png" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link href="http://sabioapi2.azurewebsites.net/assets/css/ct-paper.css" rel="stylesheet" />
+    <link href="http://sabioapi2.azurewebsites.net/assets/css/demo.css" rel="stylesheet" />
+    <link href="http://sabioapi2.azurewebsites.net/assets/css/examples.css" rel="stylesheet" />
+    <link href="http://sabioapi2.azurewebsites.net/Content/bootstrap.css" rel="stylesheet" />
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link href="http://sabioapi2.azurewebsites.net/Content/jasmine/jasmine.css" rel="stylesheet" />
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/vs.min.css" rel="stylesheet">
+
+    
+
+    <style>
+        #result {
+            background-color: #7A9E9F;
+            padding: 5px;
+            max-width: 400px;
+            color: #fff;
+        }
+
+        .player {
+            margin-top: 15px;
+            padding: 10px;
+        }
+		
+		#studentsList {
+			background-color: #7A9E9F;
+			padding: 5px;
+            max-width: 400px;
+            color: #fff;
+		}
+		
+		.student {
+			margin-top: 15px;
+            padding: 10px;
+		}
+    </style>
+
+
+</head>
+<body>
+   
+    <nav class="navbar section-light-blue" role="navigation-demo" id="demo-navbar">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://sabio.la/">
+                <div class="logo-container">
+                    <div class="logo">
+                        <img src="http://sabioapi2.azurewebsites.net/assets/img/sabio_logo.png">
+                    </div>
+                    <div class="brand">
+                        Sabio Prework
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <button href="#" class="dropdown-toggle btn btn-neutral btn-simple" data-toggle="dropdown">
+                        Homework <b class="caret"></b>
+                    </button>
+                    <!--                                  You can add classes for different colours on the next element -->
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li class="dropdown-header">JQuery exercises</li>
+                        <li><a href="http://sabioapi2.azurewebsites.net/prework/selectors-functions">Selectors and Functions</a></li>
+                        <li><a href="http://sabioapi2.azurewebsites.net/prework/forms-handlers">Forms and Handlers</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">JavaScript exercises</li>
+                        <li><a href="http://sabioapi2.azurewebsites.net/prework/objects">Objects</a></li>
+                        <li><a href="http://sabioapi2.azurewebsites.net/prework/arrays">Arrays</a></li>
+                        <li><a href="http://sabioapi2.azurewebsites.net/prework/function-scope">Function Scope</a></li>
+                        <li><a href="http://sabioapi2.azurewebsites.net/prework/function-sum">Function Sum</a></li>
+                        <li><a href="http://sabioapi2.azurewebsites.net/prework/add-properties">Add Properties</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="http://sabioapi2.azurewebsites.net/prework/tutorial" class="btn btn-neutral btn-simple">Tutorial</a>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-->
+</nav>
+
+
+    <div >
+        
+
+
+
+
+<div class="main">
+    <div class="section">
+        <div class="container">
+            <div class="tim-title">
+                <h1>Using Templates</h1>
+                <div class="row tim-row">
+                    <div style="padding-bottom: 30px;">
+                        <h3>Result:</h3>
+
+                        <!--///// HERE IS THE TAG TO APPEND TO //////////////////////////////////////////////////////////-->
+
+                        <h4 id="result"></h4>
+
+                        <!--/////////////////////////////////////////////////////////////////////////////////////////////-->
+                    </div>
+                    <h3 class="text-center">Loop through an array and display using a template</h3>
+                    <legend></legend>
+                    <div class="col-md-8 col-md-offset-2">
+
+                        <ul>
+                            <li>
+                                Get the source code from this page and create a new HTML file in VS Code with this code.
+                            </li>
+                            <li>
+                                There is a script where there has been setup a <span class="text-info">sabio.page.startUp</span> function
+                                and in it an array of objects called <span class="text-info">players</span>. Currently this array has one player object in it.
+                                Add 4 more player objects using <span class="text-info">.push()</span>.
+                            </li>
+                            <li>
+                                Create a function that will through the array and will use the template on the last script below. Display the templates in the
+                                <span class="text-italic">div</span> with an id called <span class="text-info">result</span>.
+
+                            </li>
+                            <li>
+                                Declare an array of objects called <span class="text-info">students</span>. Each one of the objects should have properties
+                                <span class="text-info">name</span> and <span class="text-info">grade</span>.
+                            </li>
+                            <li>
+                                Create a <span class="text-italic">html/text</span> script with html to display the students with name and grade similar to the one already
+                                setup. 
+                            </li>
+                            <li>
+                                Create a function that will through the array of students and will use the template you created. Display the templates in the
+                                <span class="text-italic">div</span> with an id called <span class="text-info">studentsList</span> in a similar way to the exercise above.
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div style="padding-bottom: 30px;">
+                    <h3>Students:</h3>
+
+                    <!--///// HERE IS THE TAG TO APPEND TO //////////////////////////////////////////////////////////-->
+
+                    <h4 id="studentsList"></h4>
+
+                    <!--/////////////////////////////////////////////////////////////////////////////////////////////-->
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Write your code below -->
+
+    </div>
+
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://sabioapi2.azurewebsites.net/scripts/sabio.js"></script>
+    <!-- jasmine -->
+    <script src="http://sabioapi2.azurewebsites.net/Scripts/jasmine/jasmine.js"></script>
+    <script src="http://sabioapi2.azurewebsites.net/Scripts/jasmine/jasmine-html.js"></script>
+
+    <script src="http://sabioapi2.azurewebsites.net/Scripts/jasmine/boot.js"></script>
+    <script src="http://sabioapi2.azurewebsites.net/Scripts/jasmine/jasmine-jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+    <!--  Plugins -->
+    <script src="http://sabioapi2.azurewebsites.net/assets/js/ct-paper-checkbox.js"></script>
+    <script src="http://sabioapi2.azurewebsites.net/assets/js/ct-paper-radio.js"></script>
+    <script src="http://sabioapi2.azurewebsites.net/assets/js/bootstrap-select.js"></script>
+    <script src="http://sabioapi2.azurewebsites.net/assets/js/bootstrap-datepicker.js"></script>
+
+    <script src="http://sabioapi2.azurewebsites.net/assets/js/ct-paper.js"></script>
+
+    <!--bootstrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="http://sabioapi2.azurewebsites.net/Scripts/labTests/sabio.tests.logging.js"></script>
+    <script>
+        //hljs.initHighlightingOnLoad();
+        //$(function () {
+
+        //    $.getScript("/Scripts/jasmine/jasmine-matchers.js");
+        //    window.setTimeout(function () { console.clear(); }, 300);
+
+        //});
+    </script>
+
+    
+    <script>
+	
+        sabio.page.startUp = function () {
+ 
+            var players = [{ name: "Lebron James", number: 23, team: "Lakers" }];
+			var students = [{name: "Demarcus Sales", grade: 12}]
+			
+			players.push({name: "Kobe Bryant", number: 24, team: "Lakers" });
+			players.push({name: "Dwight Howard", number: 21, team: "Wizards"});
+			players.push({name: "Chris Paul", number: 3, team: "Clippers"});
+			players.push({name: "Dwayne Wade", number: 3, team: "Heat"});
+
+			students.push({name: "Sherri Nolet", grade: 12});
+			
+			showResult(players);
+			studentResult(students);
+			
+        }
+
+		function showResult(players){
+			for(i = 0; i < players.length; i++)
+			{
+				var template = $($("#template").html());
+				template.find('.name').text(players[i].name);
+				template.find('.number').text(players[i].number);
+				template.find('.team').text(players[i].team);
+				$('#result').append(template);
+			}	
+		}
+		
+		function studentResult(students){
+			for(i = 0; i < students.length; i++)
+			{
+				var template = $($("#sTemplate").html());
+				template.find('.name').text(students[i].name);
+				template.find('.grade').text(students[i].grade);
+				$('#studentsList').append(template);
+			}
+		}
+    </script>
+
+    <script type="text/html" id="template">
+        <div class="player">
+            <div>Name: <span class="name"></span></div>
+            <div>Number: <span class="number"></span></div>
+            <div>Team: <span class="team"></span></div>
+        </div>
+
+    </script>
+	
+	<script type = "text/html" id = "sTemplate">
+		<div class = "student">
+			<div> Name: <span class="name"></span></div>
+			<div> Grade: <span class="grade"></span>th</div>
+		</div>
+	</script>
+
+
+
+</body>
+</html>
+

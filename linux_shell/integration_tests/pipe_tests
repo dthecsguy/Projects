@@ -1,0 +1,8 @@
+echo hello world this is a test | wc
+ls -a | grep src
+ls | wc
+cat < tFile | tr a-z A-Z
+cat < tFile | tr A-Z a-z | wc > Out1
+ls | cat
+(cat < tFile > Out1) || (echo failed)
+exit

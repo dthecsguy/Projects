@@ -1,0 +1,10 @@
+[ commented_command_tests.sh ] && echo "path exists" || echo "path doesn't exist"
+[ -f exit_command_tests.sh ]  && echo "path exists" || echo "path doesn't exist"
+[ -d single_command_tests.sh ] && echo "path exists" || echo "path doesn't exist"
+[ -e test_literal_tests.sh ] && echo "path exists" || echo "path doesn't exist"
+mkdir testing
+[ -e testing ] && echo "path exists" || echo "path doesn't exist"
+[ -d testing ] && echo "path exists" || echo "path doesn't exist"
+[ -f testing ] && echo "path exists" || echo "path doesn't exist"
+[ testing ] && echo "path exists" || echo "path doesn't exist"
+exit

@@ -1,0 +1,10 @@
+test commented_command_tests.sh && echo passed || echo failed
+test -f exit_command_tests.sh  && echo passed || echo failed
+test -d single_command_tests.sh && echo passed || echo failed
+test -e test_literal_tests.sh && echo passed || echo failed
+mkdir testing
+test -e testing && echo "path exists" || echo "path doesn't exist"
+test -d testing && echo "path exists" || echo "path doesn't exist"
+test -f testing && echo "path exists" || echo "path doesn't exist"
+test testing && echo "path exists" || echo "path doesn't exist"
+exit

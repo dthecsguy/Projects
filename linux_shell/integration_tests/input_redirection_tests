@@ -1,0 +1,10 @@
+cat < tFile
+wc < tFile
+tr A-Z a-z < tFile
+cat < tFile > TestOutput
+cat < tFile | tr A-Z a-z
+grep Hooper < tFile | wc
+grep Demarcus < tFile && echo "is cool" || echo "is lame"
+(grep Troy < tFile || echo failed) && echo "that's Troy"
+rm TestOutput
+exit

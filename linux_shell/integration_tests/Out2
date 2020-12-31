@@ -1,0 +1,5 @@
+  PID TTY          TIME CMD
+31312 pts/59   00:00:00 bash
+38879 pts/59   00:00:00 output_redirect
+38880 pts/59   00:00:00 rshell
+38882 pts/59   00:00:00 ps

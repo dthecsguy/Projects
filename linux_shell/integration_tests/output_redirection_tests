@@ -1,0 +1,15 @@
+rm Out1
+rm Out2
+rm Out3
+rm Out4
+rm Out5
+ls > Out1
+ps > Out2
+echo Troy Hurst > Out3
+echo Demarcus Sales | wc > Out4
+echo test > Out5
+echo Demarcus Sales >> Out3
+echo Troy Hurst | wc >> Out4
+echo Append >> Out5
+(echo hey Demarcus > Out1) || (echo bye Demarcus > Out2)
+exit
